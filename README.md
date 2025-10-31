@@ -1,8 +1,8 @@
-# wut
+# nani
 
 **CLI that explains the output of your last command.**
 
-Just type `wut` and an LLM will help you understand whatever's in your terminal. You'll be surprised how useful this can be. It can help you:
+Just type `nani` and an LLM will help you understand whatever's in your terminal. You'll be surprised how useful this can be. It can help you:
 
 - Understand stack traces
 - Decipher error codes
@@ -14,19 +14,19 @@ Just type `wut` and an LLM will help you understand whatever's in your terminal.
 ## Installation
 
 ```bash
-> pipx install wut-cli
+> pipx install nani-cli
 ```
 
 <!-- On MacOS or Linux, you can install via Homebrew:
 
 ```bash
-> brew install wut
+> brew install nani
 ```
 
 On other systems, you can install using pip:
 
 ```bash
-> pipx install wut-cli
+> pipx install nani-cli
 ``` -->
 
 Once installed, you can use OpenAI or Claude as your LLM provider. Just add the appropriate API key to your environment:
@@ -51,12 +51,12 @@ If you're using OpenAI, you can customize your model and API URL by adding the f
 
 ## Usage
 
-`wut` must be used inside a `tmux` or `screen` session to capture the last command's output. To use it, just type `wut` after running a command:
+`nani` must be used inside a `tmux` or `screen` session to capture the last command's output. To use it, just type `nani` after running a command:
 
 ```bash
 > git create-pr
 git: 'create-pr' is not a git command.
-> wut
+> nani
 ```
 
 You'll quickly get a brief explanation of the issue:
@@ -74,12 +74,12 @@ If you have a _specific question_ about your last command, you can include a que
 ```bash
 > brew install pip
 ...
-> wut "how do i add this to my PATH variable?"
+> nani "how do i add this to my PATH variable?"
 ```
 
 ## Roadmap
 
 1. [If possible,](https://stackoverflow.com/questions/24283097/reusing-output-from-last-command-in-bash/75629157#75629157) drop the requirement of being inside a tmux or screen session.
-2. Add a `--fix` option to automatically execute a command suggested by `wut`.
-3. Add `wut` to Homebrew.
+2. Add a `--fix` option to automatically execute a command suggested by `nani`.
+3. Add `nani` to Homebrew.
 4. Make some unit tests.

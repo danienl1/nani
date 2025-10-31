@@ -6,7 +6,7 @@ import argparse
 from rich.console import Console
 
 # Local
-from wut.utils import (
+from utils import (
     get_shell,
     get_terminal_context,
     explain,
@@ -37,13 +37,13 @@ def main():
     )
     args = parser.parse_args()
     console = Console()
-    debug = lambda text: console.print(f"wut | {text}") if args.debug else None
+    debug = lambda text: console.print(f"nani | {text}") if args.debug else None
 
     with console.status("[bold green]Trying my best..."):
         # Ensure environment is set up correctly
         if not os.environ.get("TMUX") and not os.environ.get("STY"):
             console.print(
-                "[bold red]wut must be run inside a tmux or screen session.[/bold red]"
+                "[bold red]nani must be run inside a tmux or screen session.[/bold red]"
             )
             return
         if (

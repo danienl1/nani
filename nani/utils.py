@@ -13,7 +13,7 @@ from anthropic import Anthropic
 from rich.markdown import Markdown
 
 # Local
-from wut.prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
+from prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
 
 # from prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
 
@@ -167,7 +167,7 @@ def get_commands(pane_output: str, shell: Shell) -> List[Command]:
 
         buffer.append(line)
 
-    return commands[1:]  # Exclude the wut command itself
+    return commands[1:]  # Exclude the nani command itself
 
 
 def truncate_commands(commands: List[Command]) -> List[Command]:
@@ -205,7 +205,7 @@ def truncate_pane_output(output: str) -> str:
         if hit_non_empty_line:
             lines.append(line)
 
-    lines = lines[1:]  # Remove wut command
+    lines = lines[1:]  # Remove nani command
     output = "\n".join(reversed(lines))
     output = truncate_chars(output, reverse=True)
     output = output.strip()

@@ -10,12 +10,11 @@ if sys.version_info[:3] < (3, 0, 0):
     sys.exit(1)
 
 setup(
-    name="wut-cli",
-    version="1.0.8",
+    name="nani-cli",
+    version="n/a",
     description="CLI that explains the output of your last command",
-    url="https://github.com/shobrook/wut",
+    url="https://github.com/danienl1/nani",
     author="shobrook",
-    author_email="shobrookj@gmail.com",
     classifiers=[
         "Environment :: Console",
         "Intended Audience :: Developers",
@@ -28,7 +27,7 @@ setup(
     keywords="openai claude cli commandline error stack-trace explain assistant terminal",
     include_package_data=True,
     packages=find_packages(),
-    entry_points={"console_scripts": ["wut = wut.wut:main"]},
+    entry_points={"console_scripts": ["nani = nani:main"]},
     install_requires=["openai", "anthropic", "ollama", "rich", "psutil"],
     requires=["openai", "anthropic", "ollama", "rich", "psutil"],
     python_requires=">=3",
