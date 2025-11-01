@@ -11,7 +11,7 @@ if sys.version_info[:3] < (3, 0, 0):
 
 setup(
     name="nani-cli",
-    version="n/a",
+    version="1.0.8",
     description="CLI that explains the output of your last command",
     url="https://github.com/danienl1/nani",
     author="shobrook",

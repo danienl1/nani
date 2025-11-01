@@ -13,9 +13,7 @@ from anthropic import Anthropic
 from rich.markdown import Markdown
 
 # Local
-from prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
-
-# from prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
+from .prompts import EXPLAIN_PROMPT, ANSWER_PROMPT
 
 MAX_CHARS = 10000
 MAX_COMMANDS = 3

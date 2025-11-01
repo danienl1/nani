@@ -6,17 +6,11 @@ import argparse
 from rich.console import Console
 
 # Local
-from utils import (
+from .utils import (
     get_shell,
     get_terminal_context,
     explain,
 )
-
-# from utils import (
-#     get_shell,
-#     get_terminal_context,
-#     explain,
-# )
 
 
 def main():
@@ -24,9 +18,9 @@ def main():
         description="Understand the output of your latest terminal command."
     )
     parser.add_argument(
-        "--query",
+        "query",
+        nargs="?",
         type=str,
-        required=False,
         default="",
         help="A specific question about what's on your terminal.",
     )
